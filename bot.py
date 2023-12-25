@@ -45,7 +45,8 @@ async def main():
             handler(dp)  # type: ignore
 
     # Setup Middlewares
-    dp.middleware.setup(middleware.RegisterMiddleware())
+    # TODO: disable while we don't have registration implemented
+    # dp.middleware.setup(middleware.RegisterMiddleware())
 
     # Setup BOT commands
     await set_commands(bot)
